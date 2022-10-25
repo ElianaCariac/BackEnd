@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Male_Fashion Template">
+    <meta name="keywords" content="Male_Fashion, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SHOPSTORE | Tienda de Ropa Deportiva</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3">
+                    <div class="header__logo">
+                        <a href=""><img src="" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <nav class="header__menu mobile-menu">
+                        <ul>
+                            <li class="active"><a href="./index.html">Inicio</a></li>
+                            <li><a href="#">Mujer</a></li>
+                            <li><a href="#">Hombre</a></li>
+                            <li><a href="#">Niños</a></li>
+                            <li><a href="#">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header -->
+
+    <!-- Slider -->
+    <section class="hero">
+        <div class="hero__slider owl-carousel">
+        <div class="hero__items set-bg" data-setbg="img/hero/slider1.jpg"></div>
+        <div class="hero__items set-bg" data-setbg="img/hero/slider2.jpg"></div>
+        <div class="hero__items set-bg" data-setbg="img/hero/slider3.jpg"></div>
+        </div>
+    </section>
+    <!-- Slider -->
+
+    <!-- Menu secundario-->
+    <header class="header2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3">
+                    <div class="header__logo">
+                        <a href=""><img src="" alt=""></a>
+                    </div>
+                </div>                
+                <div class="col-lg-6 col-md-6">
+                    <nav class="header__menu mobile-menu">
+                        <ul>
+                            <li><a href="listar.php">Listar ropa</a></li>
+                            <li><a href="agregar.html">Agregar</a></li>
+                            <li><a href="listar.php">Modificar</a></li>
+                            <li><a href="listar.php">Borrar</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Menu secundario-->
+
+
+    <!-- Product Section Begin 
+    <section>
+        <div class="container">
+          <div class="row">
+    
+    
+            <?php
+            // 1) Conexion
+            $conexion = mysqli_connect("127.0.0.1", "root", "");
+            mysqli_select_db($conexion, "tienda_de_ropa
+            // 2) Preparar la orden SQL
+            // Sintaxis SQL SELECT
+            // SELECT * FROM nombre_tabla
+            // => Selecciona todos los campos de la siguiente tabla
+            // SELECT campos_tabla FROM nombre_tabla
+            // => Selecciona los siguientes campos de la siguiente tabla
+            $consulta='SELECT * FROM ropa';
+    
+            // 3) Ejecutar la orden y obtenemos los registros
+            $datos= mysqli_query($conexion, $consulta);
+    
+            // 4) el while recorre todos los registros y genera una CARD PARA CADA UNA
+            while ($reg = mysqli_fetch_array($datos)) {?>
+              <div class="card col-sm-12 col-md-6 col-lg-3">
+                <img class="card-img-top" src="data:image/jpg;base64, <?php echo base64_encode($reg['imagen'])?>" alt="" width="267px" height="362px")>
+                <a href="ver.php?id=<?php echo $reg['id'];?>" class="card-body">
+                  <h3 class="card-title" style="width: 100%; font-size:25px;"><?php echo ucwords($reg['marca']) ?></h3>
+                  <span>$ <?php echo $reg['precio']; ?></span>
+                </a>
+              </div>
+    
+            <?php } ?>
+    
+          </div>
+        </div>
+      </section>
+ -->
+
+    
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="footer__copyright__text">
+                        <p>SHOPSPORT - Copyright © 2022 | Todos los derechos reservados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer-->
+
+    <!-- Js -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/mixitup.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
